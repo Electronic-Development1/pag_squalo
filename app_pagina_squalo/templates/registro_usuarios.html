@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(0, 255, 89, 0.351);
+        }
+        .container {
+            display: flex;
+            width: 800px;
+            height: 450px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            background: #FFFFFF;
+        }
+        .left {
+            width: 50%;
+            background: linear-gradient(135deg, #2E7D32, #1B5E20);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+        .left h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .right {
+            width: 50%;
+            background: #FFFFFF;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h2 {
+            text-align: center;
+            color: #1E1E2F;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: 500;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #2E7D32;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #1B5E20;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>SQUALO</h1>
+            <h2>Únete a nuestro equipo</h2>
+            <p>Desarrolla tu potencial con nosotros</p>
+        </div>
+        <div class="right">
+            <h2>Registro de Usuario</h2>
+            <form method="POST" action="{% url 'registro_usuarios' %}">
+                {% csrf_token %}
+                
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

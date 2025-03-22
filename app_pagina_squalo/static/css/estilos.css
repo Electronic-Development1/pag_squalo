@@ -1,0 +1,53 @@
+body {
+
+    font-family: "Montserrat", serif;
+  }
+
+.carousel-container {
+    width: 100%; /* Ajusta el tamaño total del carrusel */
+    margin: auto; /* Centrarlo en la página */
+    max-height: 400px; 
+    overflow: hidden;
+
+}
+
+.carousel-img {
+    height: 300px; /* Altura fija para reducir el tamaño */
+    object-fit: cover; /* Evita que las imágenes se distorsionen */
+}
+
+.container1:hover{
+    box-shadow: 15px 15px 2rem rgba(0, 0, 0, 0.5);
+   
+}
+
+.container1{
+    margin: 20px auto; /*El auto centra el div*/
+    padding: 0px 40px 0px 40px;
+    float: center;
+    max-width: 1200px;
+    max-height: 500px;
+    transition:box-shadow 0.5s ease ;
+    cursor: pointer;
+
+}
+
+.container{
+    cursor: pointer;
+}
+
+.nuestroEquipo{
+    font-family: "Montserrat", serif;
+    margin: 10px 20px 30px 10px;
+}
+.col-md-8{
+    background-color: beige;
+    transition: box-shadow 0.5s ease;
+    padding: 1rem;
+}
+.col-md-8:hover{
+     box-shadow: 15px 15px 2rem rgba(0, 0, 0, 0.5);
+}
+
+
+/*box-shadow: desplazamiento-x desplazamiento-y desenfoque extensión color;*/
